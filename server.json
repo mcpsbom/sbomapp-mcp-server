@@ -1,0 +1,25 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.mcpsbom/sbom-mcp",
+  "title": "SBOMApp - SBOM Generator & Vulnerability Scanner",
+  "description": "Generate SBOMs, scan vulnerabilities, and analyze dependencies from Git repos via MCP.",
+  "repository": {
+    "url": "https://github.com/mcpsbom/sbomapp-mcp-server",
+    "source": "github"
+  },
+  "version": "1.0.0",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.sbomapp.com/mcp",
+      "headers": [
+        {
+          "name": "Authorization",
+          "description": "Bearer token (API key) for authentication. Get your API key from https://sbomapp.com",
+          "isRequired": true,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}
